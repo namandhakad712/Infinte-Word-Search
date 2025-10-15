@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infinite Wiki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,6 +56,10 @@
       .footer-text {
         font-size: 0.9em;
         color: #888;
+      }
+      
+      .search-count {
+        font-weight: bold;
       }
       .footer-text a {
         color: inherit;
@@ -136,8 +142,25 @@
         right: 0;
         width: 100%;
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         background-color: #ffffff;
+      }
+      
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .sticky-footer {
+          padding: 0.5rem 0;
+          font-size: 0.8rem;
+        }
+        
+        body {
+          padding-bottom: 3rem; /* Add padding to prevent overlap */
+        }
+        
+        .sticky-footer {
+          position: relative; /* Change to relative on mobile to prevent overlap */
+          margin-top: 1rem;
+        }
       }
     </style>
   <script type="importmap">
